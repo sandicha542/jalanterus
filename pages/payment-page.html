@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/frontend/libraries/bootstrap/css/bootstrap.css">
+    <!--My Css-->
+    <link rel="stylesheet" href="/frontend/style/main.css">
+
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/frontend/img/favicon.png">
+    <title>Jalanterus.com</title>
+  </head>
+  
+  <body>
+<!--Header-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Jalanterus<span style="color:#2C7FCB;">.com</span>
+          <img src="/frontend/img/favicon.png" alt="">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+				<img src="/frontend/img/PESAN.png">
+			  </a>
+            </li>
+            <button class="cancel-button">
+              <a class="nav-link" href="index.html"><span style="color: white;">CANCEL</span></a>
+            </button>
+          </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
+<!--TUTUP Header-->
+<div class="bg-color">
+
+<!--TIME COUNTDOWN-->
+<div class="timer-order timer">
+	Mohon selesaikan pembayaran dalam 
+	<input id="hours" class="timer-order-text" placeholder="00"disabled> : 
+	<input id="minutes" class="timer-order-text" disabled> : 
+	<input id="seconds" class="timer-text22 timer-order-text"disabled>
+</div>
+<!--TUTUP TIME COUNTDOWN-->
+
+<!--PROGRES INDIKATOR-->
+<section class="indikator-progres">
+    <div class="container">
+      <div class="row">
+        <div class="col-3"></div>
+
+        <div class="col-2">
+          <p>1. PESAN</p>
+        </div>
+        <div class="col-2">
+          <P style="font-weight: 600; color: black;">2. BAYAR</P>
+        </div>
+        <div class="col-2">
+          <P>3. SELESAI</P>
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+</section>
+<!--TUTUP PROGRES INDIKATOR-->
+
+<!-- TRANSFER BANK-->
+<section>
+  <div class="container">
+    <div class="frame-informasi-pembayaran">
+      <div class="title-section">
+        Transfer Via Bank BCA
+      </div>
+      <div class="frame-kecil-informasi-pembayaran">
+        <div class="row">
+          <div class="col">
+            <table>
+            
+              <!--NAMA BANK-->
+              <tr>
+                <td>
+                  Nama Bank
+                </td>
+              </tr>
+              <tr class="nama-bank">
+                <td style="width: 340px;">
+                  Bank BCA
+                </td>
+                <td>
+                  <img src="/frontend/img/bank-bca.png">
+                </td>
+              </tr>
+              <!--TUTUP NAMA BANK-->
+
+
+              <!--NO REKENING BANK-->
+              <tr style="height:35px;">
+                <td>
+                  No Rekening
+                </td>
+              </tr>
+              <tr class="nama-bank">
+                <td style="width: 340px;">
+                  <p id="myText">8319 0010 0504 5112</p>
+                </td>
+                <td>
+                  <button class="btn" onclick="copyContent()">SALIN
+                  </button>
+                </td>
+              </tr>
+              <!--TUTUP NO REKENING BANK-->
+
+              <!--NAMA BANK-->
+              <tr>
+                <td>
+                  
+                </td>
+              </tr>
+              <tr class="nama-bank">
+                <td style="width: 340px;">
+                  Total Pembayaran
+                </td>
+                <td>
+                    IDR 1.417.200
+                </td>
+              </tr>
+              <!--TUTUP NAMA BANK-->
+
+            </table>
+          </div>
+          <div class="col">
+           FAQs
+           <div class="Faqs">
+
+            <button type="button" class="collapsible">Informasi Umum Pembayaran
+            </button>
+            <div class="content" id="faqs-collapse">
+              <ol>
+                <a href="#"><li>Apakah saya bisa mengganti metode pembayaran yang saya pilih?</li></a>
+                <a href="#"><li>Bagaimana cara saya mendapatkan bukti pembayaran atau receipt dari pemesanan saya di tiket.com?</li></a>
+                <a href="#"><li>Saya sudah melakukan pemesanan tiket namun terjadi kelebihan dalam melakukan pembayaran, apa yang dapat saya lakukan</li></a>
+              </ol>
+            </div>
+
+            <button type="button" class="collapsible">Metode Bayar di Jalanterus.com
+            </button>
+            <div class="content" id="faqs-collapse">
+              <ol>
+                <a href="#"><li>Pembayaran melalui Transfer Bank</li></a>
+                <a href="#"><li>Pembayaran melalui Virtual Wallet</li></a>
+                <a href="#"><li>Pembayaran melalui Gerai/Retail</li></a>
+              </ol>
+            </div>
+            <button type="button" class="collapsible">Pembayaran Tiket Pesawat Internasional
+            </button>
+            <div class="content" id="faqs-collapse">
+              <ol>
+                <a href="#"><li>Pembayaran melalui Transfer Bank</li></a>
+                <a href="#"><li>Pembayaran melalui Virtual Wallet</li></a>
+                <a href="#"><li>Pembayaran melalui Gerai/Retail</li></a>
+              </ol>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="informasi-penting">
+        <p>Informasi Penting :</p>
+        <li>
+          Pastikan nomor rekening tujuan sudah sesuai dengan instruksi pembayaran
+        </li>
+        <li>
+          Pastikan Kembali nominal pembayaran sesuai dengan pemesanan yang anda lakukan
+      </div>
+      </li>
+    </div>
+  </div>
+
+</section>
+<!--TUTUP TRANSFER BANK-->
+
+<!--DETAIL FASILITAS-->
+<section class="upload-bukti">
+  <div class="container">
+    <div class="row">
+      <div class="col-8"></div>
+      <div class="col-4">
+        <div class="upload-button">
+          <label for="file-upload" class="custom-file-upload" style="cursor:pointer;">
+            <i class="fa fa-cloud-upload" ></i>UPLOAD BUKTI BAYAR
+            </label>
+            <input id="file-upload" type="file"/> <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--DETAIL FASILITAS-->
+
+<!--DETAIL FASILITAS-->
+<section class="finish">
+  <div class="container">
+    <div class="row">
+      <div class="col-8"></div>
+      <div class="col-4">
+          <a href="success-order.html">
+            <button>FINISH</button>
+          </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--DETAIL FASILITAS-->
+
+
+</div><!--FOOTER-->
+    <section class="footer-booking-page">
+
+  <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4>
+            2025 Copyright Jalanterus.com. All Right Reserved.
+          </h4>
+        </div>
+      </div>
+
+  </div>
+    </section>
+<!--TUTUP FOOTER-->
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="/frontend/libraries/bootstrap/js/bootstrap.js"></script>
+    <!--SCRIPT TIMER COUNTDOWN-->
+      <script>
+        function Timer( minuteId, secondsId, initValue ){
+      
+      this.minutes = initValue;
+      
+      this.seconds = initValue * 60;
+      
+      this.minuteElement = document.getElementById( minuteId );
+      
+      this.secondElement = document.getElementById( secondsId );  
+      
+      this.decrement = function(){
+        
+        if( this.seconds < 59 ){
+          this.secondElement.value = this.seconds;
+        } else {
+          this.minuteElement.value = this.getMinutes();
+          this.secondElement.value = this.getSeconds();
+        }
+        
+        this.seconds--;    
+        setTimeout( this.decrement.bind( this ), 1000 );
+        
+      };
+      
+      this.getMinutes = function(){
+        this.minutes = Math.floor( this.seconds / 60 );
+        return this.minutes;
+      };
+      
+      this.getSeconds = function(){
+        return this.seconds - Math.round( this.minutes * 60 );
+      };
+      
+      this.start = function(){
+        this.decrement();
+      };
+      
+      return this;
+      
+      }
+
+      // first 2 params are the input id values, last is the intial minute value
+      var timer = new Timer( "minutes", "seconds", 60 ); 
+
+      timer.start();
+
+      </script>
+    <!--TUTUP SCRIPT TIMER COUNTDOWN-->
+
+    <!--SCRIPT COPY TO CLIPBOARD-->
+    <script>
+  let text = document.getElementById('myText').innerHTML;
+  const copyContent = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
+    </script>
+    <!--TUTUP SCRIPT COPY TO CLIPBOARD-->
+
+    <!--SCRIPT faqs collapse-->
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+    </script>
+    <!--TUTUP SCRIPT faqs collapse-->
+  </body>
+</html>

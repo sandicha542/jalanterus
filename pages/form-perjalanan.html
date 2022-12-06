@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/frontend/libraries/bootstrap/css/bootstrap.css">
+    <!--My Css-->
+    <link rel="stylesheet" href="/frontend/style/main.css">
+
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/frontend/img/favicon.png">
+    <title>Form Pencarian</title>
+  </head>
+  
+  <body>
+<!--Header-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="/pages/index.html">Jalanterus<span style="color:#2C7FCB;">.com</span>
+          <img src="/frontend/img/favicon.png" alt="">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#promo-tiket">Promo Tiket</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/cek-order.html">Cek Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  data-toggle="modal" data-target="#modal-masuk" style="cursor: pointer;">Masuk</a>
+            </li>
+            <button class="nav-item">
+              <a class="nav-link"  data-toggle="modal" data-target="#modal-daftar"><span style="color: white;">Daftar</span></a>
+            </button>
+          </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
+
+      <!--MODAL DAFTAR-->
+      <div class="modal fade" id="modal-daftar" tabindex="-1" role="dialog" aria-labelledby="modal-daftarTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-daftarTitle">DAFTAR</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          
+          </div>
+          
+          <form>
+                <div class="modal-body">               
+                  Silakan isi formulir ini untuk membuat akun.
+                    <br><br>
+                  <label for="email-daftar">Email</label><br>
+                  <input type="text" name="form-daftar" id="email-daftar" placeholder="enter email">
+                    <br>
+                  <label for="password-daftar">Pasword</label><br>
+                  <input type="password" name="form-daftar" id="password-daftar" placeholder="enter password">
+                    <br>
+                  <label for="password-daftar">Repeat Password</label><br>
+                  <input type="password" name="form-daftar" id="password-daftar" placeholder="repeat password">
+                    <br>
+                  <input type="checkbox" name="form-daftar" id="remember-me">
+  
+                  By creating an account you agree to our <a href="#">Terms & Privacy.</a>
+                </div>
+  
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                  <a href="#">
+                  <button type="submit" class="btn btn-primary">Daftar
+                  </button>
+                  </a>
+                </div>
+          </form>
+  
+          </div>
+        </div>
+         </div>
+    <!--MODAL DAFTAR-->
+  
+      <!--MODAL MASUK-->
+      <div class="modal fade" id="modal-masuk" tabindex="-1" role="dialog" aria-labelledby="modal-masukTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-masukTitle">Masuk</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          
+          </div>
+          
+          <form>
+                <div class="modal-body">               
+                  <label for="email-masuk">Email</label><br>
+                  <input type="text" name="form-masuk" id="email-masuk" placeholder="enter email">
+                    <br>
+                  <label for="password-masuk">Pasword</label><br>
+                  <input type="password" name="form-masuk" id="password-masuk" placeholder="enter password">
+                    <br>
+  
+                    <br>
+                  <input type="checkbox" name="form-masuk" id="remember-me">
+                  Remember me   |
+                  <a href="#" style="text-align: right;">Lupa Password ?</a>
+                </div>
+  
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                  <a href="#">
+                  <button type="submit" class="btn btn-primary">Masuk
+                  </button>
+                  </a>
+                </div>
+          </form>
+  
+          </div>
+        </div>
+         </div>
+    <!--MODAL MASUK-->
+<!--TUTUP Header-->
+
+<!--HERO-->
+    <section class="hero-section-form-perjalanan">
+        <div class="container">
+
+            <div class="hero-great-deals">
+                <div class="row">
+                    <a href="#"><img src="/frontend/img/great-deals1.png"></a>
+                    <a href="#"><img src="/frontend/img/great-deals2.png"></a>
+                    <a href="#"><img src="/frontend/img/great-deals3.png"></a>
+                </div>
+            </div>
+
+            <div class="hero-table-search">
+                <h4>
+                    Cari harga tiket pesawat murah & promo di sini
+                </h4>
+            <form>
+              
+                <div class="row row-cols-5">
+
+                <div class="col">
+                <label for="Dari">Dari <br>
+                    <select id="Dari" class="pencarian">
+                        <option value="volvo">Jakarta</option>
+                        <option value="saab">Bali</option>
+                        <option value="opel">Riau</option>
+                        <option value="audi">NTT</option>
+                        <option value="audi">Singapura</option>
+                        <option value="audi">Kep. Riau</option>
+                        <option value="audi">Jawa Barat</option>
+                    </select></label>
+                </div>
+
+                <div class="col">
+                <label for="Ke">Ke <br>
+                    <select id="Ke" class="pencarian">
+                        <option value="volvo">Jakarta</option>
+                        <option value="saab">Bali</option>
+                        <option value="opel">Riau</option>
+                        <option value="audi">NTT</option>
+                        <option value="audi">Singapura</option>
+                        <option value="audi">Kep. Riau</option>
+                        <option value="audi">Jawa Barat</option>
+                    </select></label>
+                </div> 
+
+                <div class="col">
+                <label for="Keberangkatan">Keberangkatan <br>
+                    <input type="date" class="tanggal" id="keberangkatan"></label>
+                </div>
+
+                <div class="col">
+                    <label for="Pulang">Pulang <span style="font-size:13px;">(opsional)</span>  <input type="checkbox" id="checkbox"/><br>
+                    <input type="date" class="tanggal" id="kepulangan" disabled></label>
+                </div>
+
+                <div class="col">
+                <label for="Kelas-Tiket">Kelas Tiket <br>
+                    <select id="Kelas-Tiket" class="pencarian" style="width: 140px;">
+                        <option value="volvo">Ekonomi</option>
+                        <option value="saab">Ekonomi Premium</option>
+                        <option value="opel">Bisnis</option>
+                        <option value="audi">Utama</option>
+                        <option value="audi">Quiet Zone</option>
+                    </select></label>
+                </div>
+
+            </form>
+                </div>
+
+                <div class="row">
+                    <div class="col-5">
+                        <p>*Jadwal dapat berubah sewaktu-waktu</p>
+                    </div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col">
+                        <a href="/pages/pencarian.html">
+                          <button class="cari-tiket">
+                            Cari Tiket
+                          </button>
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+
+        </div>
+    </section>
+<!--TUTUP HERO-->
+
+<!--RUTE TERSEDIA-->
+
+    <section class="rute-tersedia">
+    <div class="container">
+            <h3 class="main-title">Rute Tersedia</h3>
+
+    <div class="row">
+        <div class="col-4">
+        <p> Tiket Pesawat Jakarta  -  Bali <br>
+            Tiket Pesawat Jakarta  -  Riau <br>
+            Tiket Pesawat Jakarta  -  NTT <br>
+            Tiket Pesawat Jakarta  -  Singapura <br>
+            Tiket Pesawat Jakarta  -  Kep. Riau <br>
+            Tiket Pesawat Jakarta  -  Jawa Barat <br>
+            Tiket Pesawat Bali  -  Riau <br>
+            Tiket Pesawat Bali  -  NTT <br>
+            Tiket Pesawat Bali  -  Singapura <br>
+            Tiket Pesawat Bali  -  Jawa Barat
+        </p>
+        </div>
+
+        <div class="col-4">
+        <p> Tiket Pesawat Kep. Riau  -  Bali <br>
+            Tiket Pesawat Kep. Riau  -  Riau <br> 
+            Tiket Pesawat Kep. Riau  -  Jakarta <br>
+            Tiket Pesawat Kep. Riau  -  Singapura <br>
+            Tiket Pesawat Jawa Barat  -  Bali <br>
+            Tiket Pesawat Jawa Barat  -  Jakarta <br>
+            Tiket Pesawat Riau  -  Bali <br>
+            Tiket Pesawat Riau  -  Kep. Riau <br>
+            Tiket Pesawat Riau  -  Jakarta
+        </p>
+        </div>
+
+        <div class="col-4">
+        <p> Tiket Pesawat Riau  - Jawa Barat <br>
+            Tiket Pesawat Riau  - NTT <br>
+            Tiket Pesawat NTT  -  Bali <br>
+            Tiket Pesawat NTT  -  Jakarta <br>
+            Tiket Pesawat NTT  -  Jawa Barat <br>
+            Tiket Pesawat Singapura  -  Bali <br>
+            Tiket Pesawat Singapura  -  Jakarta <br>
+            Tiket Pesawat Singapura  -  Kep Riau <br>
+        </p>
+        </div>
+
+    </div>
+    </div>
+
+    </section>
+
+<!--TUTUP RUTE TERSEDIA-->
+
+<!--MASKAPAI PARTNER-->
+
+    <section class="maskapai-partner">
+    <div class="container">
+        <h3 class="main-title">Maskapai Partner</h3>
+        <div class="maskapai-partner-logo">
+            <div class="row">
+                <a href="#"><img src="/frontend/img/maskapai1.png"></a>
+                <a href="#"><img src="/frontend/img/maskapai2.png"></a>
+                <a href="#"><img src="/frontend/img/maskapai3.png"></a>
+             </div>
+        </div>
+
+    </div>
+
+    </section>
+
+<!--TUTUP MASKAPAI PARTNER-->
+
+<!--HOT PROMO PAKET WISATA-->
+<section class="hot-promo" id="promo-tiket">
+  <div class="container">
+      <h3 class="main-title">Hot Promo Paket Wisata</h3>
+
+      <!--BUTTON FILTER-->
+
+          <div id="myBtnContainer">
+              <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+              <button class="btn" onclick="filterSelection('Domestik')"> Domestik</button>
+              <button class="btn" onclick="filterSelection('Internasional')"> Internasional</button>
+        </div>
+
+      <!--TUTUP BUTTON FILTER-->
+
+      <!--GRID-->
+
+      <div class="row">
+          <div class="column Domestik">
+            <div class="content">
+              <a href="pencarian.html"><img src="/frontend/img/PROMO1.jpg" style="width:100%"></a>
+              <h4>Kepulauan Gili</h4>
+              <p>Menyelam, Scuba,
+                Komodo & Penyu</p>
+              <h5>Rp517k/malam</h5>
+            </div>
+          </div>
+          <div class="column Domestik">
+            <div class="content">
+              <a href="pencarian.html"><img src="/frontend/img/PROMO2.jpg" style="width:100%"></a>
+              <h4>Ubud, Bali</h4>
+              <p>Hutan Monyet, Museum
+                Seni dan Pura</p>
+              <h5>Rp517k/malam</h5>
+            </div>
+          </div>
+          <div class="column Domestik">
+            <div class="content">
+              <a href="pencarian.html"><img src="/frontend/img/PROMO3.jpg" style="width:100%"></a>
+              <h4>Pulau Komodo</h4>
+              <p>Komodo & menyelam
+                di Batu Bolong</p>
+                <h5>Rp517k/malam</h5>
+            </div>
+          </div>
+          <div class="column Domestik">
+              <div class="content">
+                <a href="pencarian.html"><img src="/frontend/img/PROMO4.jpg" style="width:100%"></a>
+                <h4>Canggu, Bali</h4>
+                <p>Pantai Canggu  & 
+                  Pura Tanah Lot</p>
+                  <h5>Rp517k/malam</h5>
+              </div>
+            </div>
+          
+          <div class="column Internasional">
+            <div class="content">
+              <a href="pencarian.html"><img src="/frontend/img/PROMO5.jpg" style="width:100%"></a>
+              <h4>Orchard Road</h4>
+              <p>Singapore’s retail heart, with discount outlets, department stores and upscale boutiques</p>
+              <h5>Rp517k/malam</h5>
+            </div>
+          </div>
+          <div class="column Internasional">
+              <div class="content">
+                <a href="pencarian.html"><img src="/frontend/img/PROMO6.jpg" style="width:100%"></a>
+                <h4>Chinatown</h4>
+                <p>restaurants serving traditional fare, Souvenir shops and indie boutiques, </p>
+                <h5>Rp517k/malam</h5>
+              </div>
+            </div>
+          <div class="column Internasional">
+            <div class="content">
+              <a href="pencarian.html"><img src="/frontend/img/PROMO7.jpg" style="width:100%"></a>
+              <h4>Gardens by the Bay</h4>
+              <p>showpiece of horticulture and garden artistry</p>
+              <h5>Rp517k/malam</h5>
+            </div>
+          </div>
+          <div class="column Internasional">
+            <div class="content">
+              <a href="pencarian.html"><img src="/frontend/img/PROMO8.jpg" style="width:100%"></a>
+              <h4>Sentosa Island</h4>
+              <p>Sentosa Boardwalk
+                Madame Tussauds Singapore</p>
+              <h5>Rp517k/malam</h5>
+            </div>
+          </div>
+        <!-- END GRID -->
+      </div>
+      <!-- END ROW -->
+
+  </div>
+</section>
+<!--TUTUP HOT PROMO PAKET WISATA-->
+
+<!--PEMBERITAHUAN JENIS TIKET-->
+    <section class="jenis-tiket">
+        <div class="container">
+        <h5>
+        Yuk, Kenali Lebih Jauh 5 Jenis Kelas Pesawat
+        </h5>
+        <p>
+            Bagi kamu pelanggan setia pesawat pasti sudah tahu ya, macam-macam tipe kursi pesawat. Lazimnya, masyarakat hanya mengetahui jenis tipe kursi pesawat seperti kelas ekonomi, bisnis, dan first class. Tapi tahu nggak sih, ternyata ada tipe kursi pesawat lain? Apa saja? Simak, ulasannya di bawah ini. <br> <br>
+
+            <b>Kelas Ekonomi</b>  <br>
+            Kelas ekonomi merupakan kelas paling umum. Tempat duduknya cukup nyaman meskipun ukuran kursinya terbilang kecil jika dibandingkan dengan kelas lainnya. Kursi di kelas ekonomi biasanya memiliki jarak yang nggak terlalu lebar. Bahkan, jika kursi di depan dimundurkan sandarannya, akan membuat jarak dengan penumpang di belakang sempit. Di beberapa maskapai, akan menyediakan makanan dan minuman untuk perjalanan yang memakan waktu lama. <br> <br>
+
+            <b>Kelas Ekonomi Premium</b>  <br>
+            Penumpang kelas ekonomi premium biasanya akan mendapatkan fasilitas yang lebih baik dari kelas ekonomi. Biasanya kursinya lebih empuk, terdapat sandaran lengan, hingga ruang kaki lebih lebar sehingga mudah untuk meregangkan kaki. <br> <br>
+
+            <b>Kelas Bisnis</b>  <br>
+            Memiliki kursi yang lebih nyaman dibanding kelas ekonomi dan ekonomi premium, tipe kursi kelas bisnis, mematok harga yang sedikit lebih tinggi. Pasalnya, harga yang dibayar sangat sebanding dengan fasilitas yang didapatkan. Contohnya saja, di kelas bisnis, kamu akan mendapatkan kursi yang bisa diatur kemiringannya hingga 180 derajat. Sehingga akan membuat penumpang terasa lebih nyaman untuk istirahat. Terdapat pula fasilitas lain seperti layar LCD untuk hiburan dan stop kontak. <br> <br>
+
+            <b>Kelas Utama</b>  <br>
+            Dari segi harga, dibanding ketiga kelas lainnya, kelas utama memang memiliki tarif paling tinggi. Sederet fasilitas yang bisa didapatkan saat kamu berada di first class antara lain kursi paling nyaman, ukurannya lebar, dan ada pembatas untuk menjaga privasi. Selain itu, di beberapa maskapai menyediakan layanan antar-jemput, checkin, hingga variasi makanan yang mewah dan komplet. <br> <br>
+
+            <b>Quiet Zone</b>  <br>
+            Sudah pernah dengar kelas pesawat yang satu ini? Quiet Zone atau Zona Tenang merupakan kursi yang disediakan khusus di beberapa maskapai penerbangan. Contohnya saja seperti maskapai penerbangan Air Asia . Jika kamu ingin terhindar dari kebisingan dan mencari suasana yang sunyi saat naik pesawat, maka Quiet Zone adalah pilihan yang tepat buat kamu. Kursi ini disediakan hanya beberapa baris saja. Tapi perlu diingat, bayi dan anak-anak dengan usia di bawah 10 tahun nggak bisa memesan kursi di Quiet Zone.
+        </p>
+        </div>
+        
+    </section>
+<!--TUTUP PEMBERITAHUAN JENIS TIKET-->
+
+<!--FOOTER-->
+    <section class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <h2>
+          <span style="color:#ffffff;">Jalanterus</span><span style="color:#2C7FCB;">.com</span>
+        </h2> <br>
+          <h5>
+            Partner Pembayaran <br> <br>
+          </h5>
+          <img src="/frontend/img/bank-bca.png"> <br> <br>
+          <img src="/frontend/img/bank-mandiri.png">
+      </div>
+      <div class="col-3">
+        <h5>Tentang Jalanterus.com</h5>
+        <p>Cara Pesan <br>
+          Hubungi Kami <br>
+          Pusat Bantuan <br>
+          Tentang Kami</p>
+
+          <h5>Follow kami di</h5>
+        <p>Instagram <br>
+          Twitter <br>
+          Facebook <br>
+          Youtube</p>
+      </div>
+      <div class="col-3" >
+        <h5>Produk Kami</h5>
+        <p>Tiket Pesawat <br>
+          Refund Tiket <br>
+          Reschedule Tiket</p>
+      </div>
+      <div class="col-3">
+        <h5>Download Jalanterus APP</h5>
+        <img src="/frontend/img/download-app.png" width="100%">
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-12">
+          <h4>
+            2025 Copyright Jalanterus.com. All Right Reserved.
+          </h4>
+        </div>
+      </div>
+
+  </div>
+    </section>
+
+<!--TUTUP FOOTER-->
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="/frontend/libraries/bootstrap/js/bootstrap.js"></script>
+
+    <!--HOT PROMO FILTER-->
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+    </script>
+    <!--TUTUP HOT PROMO FILTER-->
+
+    <!--DISABLE KEPULANGAN-->
+    <script>
+        $('#checkbox').click(function() {
+    if (this.checked) {
+        $('#kepulangan').prop('disabled', false); // If checked enable item      
+    } else {
+        $('#kepulangan').prop('disabled', true); // If checked disable item                  
+    }
+    });
+    </script>
+    <!--TUTUP DISABLE KEPULANGAN-->
+
+  </body>
+</html>

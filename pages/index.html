@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/frontend/libraries/bootstrap/css/bootstrap.css">
+    <!--My Css-->
+    <link rel="stylesheet" href="/frontend/style/main.css">
+
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/frontend/img/favicon.png">
+    <title>Jalanterus.com</title>
+  </head>
+  
+  <body>
+<!--Header-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Jalanterus<span style="color:#2C7FCB;">.com</span>
+          <img src="/frontend/img/favicon.png" alt="">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/pages/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#promo-tiket">Promo Tiket</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cek-order.html">Cek Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  data-toggle="modal" data-target="#modal-masuk" style="cursor: pointer;">Masuk</a>
+            </li>
+            <button class="nav-item">
+              <a class="nav-link"  data-toggle="modal" data-target="#modal-daftar"><span style="color: white;">Daftar</span></a>
+            </button>
+          </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
+
+  <!--MODAL DAFTAR-->
+    <div class="modal fade" id="modal-daftar" tabindex="-1" role="dialog" aria-labelledby="modal-daftarTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-daftarTitle">DAFTAR</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        
+        </div>
+        
+        <form>
+              <div class="modal-body">               
+                Silakan isi formulir ini untuk membuat akun.
+                  <br><br>
+                <label for="email-daftar">Email</label><br>
+                <input type="text" name="form-daftar" id="email-daftar" placeholder="enter email">
+                  <br>
+                <label for="password-daftar">Pasword</label><br>
+                <input type="password" name="form-daftar" id="password-daftar" placeholder="enter password">
+                  <br>
+                <label for="password-daftar">Repeat Password</label><br>
+                <input type="password" name="form-daftar" id="password-daftar" placeholder="repeat password">
+                  <br>
+                <input type="checkbox" name="form-daftar" id="remember-me">
+
+                By creating an account you agree to our <a href="#">Terms & Privacy.</a>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                <a href="#">
+                <button type="submit" class="btn btn-primary">Daftar
+                </button>
+                </a>
+              </div>
+        </form>
+
+        </div>
+      </div>
+       </div>
+  <!--MODAL DAFTAR-->
+
+    <!--MODAL MASUK-->
+    <div class="modal fade" id="modal-masuk" tabindex="-1" role="dialog" aria-labelledby="modal-masukTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal-masukTitle">Masuk</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        
+        </div>
+        
+        <form>
+              <div class="modal-body">               
+                <label for="email-masuk">Email</label><br>
+                <input type="text" name="form-masuk" id="email-masuk" placeholder="enter email">
+                  <br>
+                <label for="password-masuk">Pasword</label><br>
+                <input type="password" name="form-masuk" id="password-masuk" placeholder="enter password">
+                  <br>
+
+                  <br>
+                <input type="checkbox" name="form-masuk" id="remember-me">
+                Remember me   |
+                <a href="#" style="text-align: right;">Lupa Password ?</a>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                <a href="#">
+                <button type="submit" class="btn btn-primary">Masuk
+                </button>
+                </a>
+              </div>
+        </form>
+
+        </div>
+      </div>
+       </div>
+  <!--MODAL MASUK-->
+<!--TUTUP Header-->
+
+<!--HERO-->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero">
+
+                <h5>Hi Selamat Datang di JalanTerus.Com</h5>
+                <h2>Sudah Siap Untuk Liburan ?</h2>
+                <form action="form-perjalanan.html">
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                </form>
+                  <a href="#"><p>Jakarta  -  Bali  -  Riau  -  NTT  - Singapura  -  Kep Riau  -  Jawa Barat</p></a>
+                
+            </div>
+        </div>
+    </section>
+<!--TUTUP HERO-->
+
+<!--GREAT DEAL-->
+    <Section class="great-deals">
+        <div class="container">
+            <h3 class="main-title">Great Deals</h3>
+            <div class="row">
+                <div class="col-4">
+                    <a href="#"><img src="/frontend/img/great-deals1.png" class="image-great-deals"></a>
+                </div>
+                <div class="col-4">
+                    <a href="#"><img src="/frontend/img/great-deals2.png" class="image-great-deals"></a>
+                </div>
+                <div class="col-4">
+                    <a href="#"><img src="/frontend/img/great-deals3.png" class="image-great-deals"></a>
+                </div>
+            </div>
+        </div>
+    </Section>
+<!--TUTUP GREAT DEAL-->
+
+<!--HOT PROMO PAKET WISATA-->
+    <section class="hot-promo" id="promo-tiket">
+        <div class="container">
+            <h3 class="main-title">Hot Promo Paket Wisata</h3>
+
+            <!--BUTTON FILTER-->
+
+                <div id="myBtnContainer">
+                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('Domestik')"> Domestik</button>
+                    <button class="btn" onclick="filterSelection('Internasional')"> Internasional</button>
+              </div>
+
+            <!--TUTUP BUTTON FILTER-->
+
+            <!--GRID-->
+
+            <div class="row">
+                <div class="column Domestik">
+                  <div class="content">
+                    <a href="pencarian.html"><img src="/frontend/img/PROMO1.jpg" style="width:100%"></a>
+                    <h4>Kepulauan Gili</h4>
+                    <p>Menyelam, Scuba,
+                      Komodo & Penyu</p>
+                    <h5>Rp517k/malam</h5>
+                  </div>
+                </div>
+                <div class="column Domestik">
+                  <div class="content">
+                    <a href="pencarian.html"><img src="/frontend/img/PROMO2.jpg" style="width:100%"></a>
+                    <h4>Ubud, Bali</h4>
+                    <p>Hutan Monyet, Museum
+                      Seni dan Pura</p>
+                    <h5>Rp517k/malam</h5>
+                  </div>
+                </div>
+                <div class="column Domestik">
+                  <div class="content">
+                    <a href="pencarian.html"><img src="/frontend/img/PROMO3.jpg" style="width:100%"></a>
+                    <h4>Pulau Komodo</h4>
+                    <p>Komodo & menyelam
+                      di Batu Bolong</p>
+                      <h5>Rp517k/malam</h5>
+                  </div>
+                </div>
+                <div class="column Domestik">
+                    <div class="content">
+                      <a href="pencarian.html"><img src="/frontend/img/PROMO4.jpg" style="width:100%"></a>
+                      <h4>Canggu, Bali</h4>
+                      <p>Pantai Canggu  & 
+                        Pura Tanah Lot</p>
+                        <h5>Rp517k/malam</h5>
+                    </div>
+                  </div>
+                
+                <div class="column Internasional">
+                  <div class="content">
+                    <a href="pencarian.html"><img src="/frontend/img/PROMO5.jpg" style="width:100%"></a>
+                    <h4>Orchard Road</h4>
+                    <p>Singapore’s retail heart, with discount outlets, department stores and upscale boutiques</p>
+                    <h5>Rp517k/malam</h5>
+                  </div>
+                </div>
+                <div class="column Internasional">
+                    <div class="content">
+                      <a href="pencarian.html"><img src="/frontend/img/PROMO6.jpg" style="width:100%"></a>
+                      <h4>Chinatown</h4>
+                      <p>restaurants serving traditional fare, Souvenir shops and indie boutiques, </p>
+                      <h5>Rp517k/malam</h5>
+                    </div>
+                  </div>
+                <div class="column Internasional">
+                  <div class="content">
+                    <a href="pencarian.html"><img src="/frontend/img/PROMO7.jpg" style="width:100%"></a>
+                    <h4>Gardens by the Bay</h4>
+                    <p>showpiece of horticulture and garden artistry</p>
+                    <h5>Rp517k/malam</h5>
+                  </div>
+                </div>
+                <div class="column Internasional">
+                  <div class="content">
+                    <a href="pencarian.html"><img src="/frontend/img/PROMO8.jpg" style="width:100%"></a>
+                    <h4>Sentosa Island</h4>
+                    <p>Sentosa Boardwalk
+                      Madame Tussauds Singapore</p>
+                    <h5>Rp517k/malam</h5>
+                  </div>
+                </div>
+              <!-- END GRID -->
+            </div>
+            <!-- END ROW -->
+
+        </div>
+    </section>
+<!--TUTUP HOT PROMO PAKET WISATA-->
+
+<!--REKOMENDASI LIBURAN-->
+<section class="rekom-liburan">
+  <div class="container">
+    <h3 class="main-title" style="text-align: left;">Rekomendasi Liburan</h3>
+    <div class="row">
+      <div class="col-4">
+        <a href="pencarian.html">
+          <div class="content">
+            <img src="/frontend/img/rekom-libur1.png" alt="Mountains" style="width:100%">
+            <h4>Dago Dreampark Bandung</h4>
+            <p>“untuk liburan dgn keluarga sangat seru, ada tempat untuk interaksi dgn hewan-hewan cocok buat anak-anak. overall semua menyenangkan” <br>
+
+            Laetta I. - Sel, 1 September 2020</p>
+            <h5>Rp250k/malam</h5>
+        </div>
+        </a>
+      </div>
+      <div class="col-4">
+        <a href="pencarian.html">
+          <div class="content">
+            <img src="/frontend/img/rekom-libur2.png" alt="Lights" style="width:100%">
+              <h4>Trekking Sentul Tripacker</h4>
+              <p>Suatu pengalaman baru, sepanjang rute kita disuguhi view persawahan, bukit, dan sungai yang bagus... <br>
+
+                Angga H. P. 
+                - Sen, 6 Sep 2021</p>
+              <h5>Rp450k/malam</h5>
+            </div>
+            
+        </a>
+      </div>
+        <div class="col-4">
+          <a href="pencarian.html">
+          <div class="content">
+          <img src="/frontend/img/rekom-libur3.png" alt="Domestik" style="width:100%">
+            <h4>Ancol, Jakarta</h4>
+            <p>“pokoknya keren, aman, bersih, pelayanan oke, petugasnya ramah ramah ☺️ gak sabar mau kesana lagii 🙏” <br>
+
+              Suci R. - Jum, 2 September 2022</p>
+              <h5>Rp150k/malam</h5>
+          </div>
+        </div>
+        </a>
+    </div>
+  </div>
+
+</section>
+<!--TUTUP REKOMENDASI LIBURAN-->
+
+<!--PUSAT BANTUAN-->
+<section class="pusat-bantuan">
+  <div class="container">
+    <h3 class="main-title">Rekomendasi Liburan</h3>
+  
+  <div class="row">
+    <div class="col-3">
+      <a href="#"><img src="/frontend/img/bantuan1.png" ></a>
+    </div>
+    <div class="col-3">
+      <a href="#"><img src="/frontend/img/bantuan2.png" ></a>
+    </div>
+    <div class="col-3">
+      <a href="#"><img src="/frontend/img/bantuan3.png" ></a>
+    </div>
+    <div class="col-3">
+      <a href="#"><img src="/frontend/img/bantuan4.png" ></a>
+    </div>
+  </div>
+
+</div>
+</section>
+<!--TUTUP PUSAT BANTUAN-->
+
+<!--FOOTER-->
+<section class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <h2>
+          <span style="color:#ffffff;">Jalanterus</span><span style="color:#2C7FCB;">.com</span>
+        </h2> <br>
+          <h5>
+            Partner Pembayaran <br> <br>
+          </h5>
+          <img src="/frontend/img/bank-bca.png"> <br> <br>
+          <img src="/frontend/img/bank-mandiri.png">
+      </div>
+      <div class="col-3">
+        <h5>Tentang Jalanterus.com</h5>
+        <p>Cara Pesan <br>
+          Hubungi Kami <br>
+          Pusat Bantuan <br>
+          Tentang Kami</p>
+
+          <h5>Follow kami di</h5>
+        <p>Instagram <br>
+          Twitter <br>
+          Facebook <br>
+          Youtube</p>
+      </div>
+      <div class="col-3" >
+        <h5>Produk Kami</h5>
+        <p>Tiket Pesawat <br>
+          Refund Tiket <br>
+          Reschedule Tiket</p>
+      </div>
+      <div class="col-3">
+        <h5>Download Jalanterus APP</h5>
+        <img src="/frontend/img/download-app.png" width="100%">
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-12">
+          <h4>
+            2025 Copyright Jalanterus.com. All Right Reserved.
+          </h4>
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<!--TUTUP FOOTER-->
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="/frontend/libraries/bootstrap/js/bootstrap.js"></script>
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
+
+
+  </body>
+</html>

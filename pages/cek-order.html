@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/frontend/libraries/bootstrap/css/bootstrap.css">
+    <!--My Css-->
+    <link rel="stylesheet" href="/frontend/style/main.css">
+
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/frontend/img/favicon.png">
+    <title>Cek Pesanan</title>
+  </head>
+  
+  <body>
+<!--Header-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Jalanterus<span style="color:#2C7FCB;">.com</span>
+          <img src="/frontend/img/favicon.png" alt="">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#products">Cek Order</a>
+            </li>
+
+            <li class="nav-item dropdown">
+
+              <a class="nav-link dropdown-toggle" href="#" id="Profile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                
+                Sandicha542
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="Profile">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="#">Pengaturan</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Log Out</a>
+              </div>
+
+            </li>
+
+          </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
+<!--TUTUP Header-->
+<div class="bg-color">
+
+<!--TABEL SEARCH-->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div class="form-group pull-right">
+          <div class="cek-pesanan-filter">
+              Cek Pesanan
+              <input type="text" class="search form-control" placeholder="Ketik Order id atau tujuan">
+              <span class="counter pull-right"></span>
+              </div>
+              
+          </div>
+      </div>
+      <div class="col-9">
+        <div class="tabel-cek-pesanan">
+          <h4 style="text-align: center; margin-bottom:15px;">List Pesanan Tiket</h4>
+          <table class="table table-hover table-bordered results">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th class="col-md-5 col-xs-4">Asal / Tujuan</th>
+                <th class="col-md-4 col-xs-2">Order ID</th>
+                <th class="col-md-3 col-xs-3">Status</th>
+                <th class="col-md-3 col-xs-3">Unduh</th>
+              </tr>
+              <tr class="warning no-result">
+                <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Jakarta - SUrabaya</td>
+                <td>123456</td>
+                <td>Active</td>
+                <td><a href="#" download="e-tiket">Download</a></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jakarta - Bali</td>
+                <td>345678</td>
+                <td>Exp</td>
+                <td><a href="#" download="e-tiket">Download</a></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Pekanbaru - Jakarta</td>
+                <td>234567</td>
+                <td>Exp</td>
+                <td><a href="#" download="e-tiket">Download</a></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Pekanbaru - Bali</td>
+                <td>765534</td>
+                <td>Exp</td>
+                <td><a href="#" download="e-tiket">Download</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--TUTUP TABEL SEARCH-->
+
+
+</div><!--FOOTER-->
+    <section class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <h2>
+          <span style="color:#ffffff;">Jalanterus</span><span style="color:#2C7FCB;">.com</span>
+        </h2> <br>
+          <h5>
+            Partner Pembayaran <br> <br>
+          </h5>
+          <img src="/frontend/img/bank-bca.png"> <br> <br>
+          <img src="/frontend/img/bank-mandiri.png">
+      </div>
+      <div class="col-3">
+        <h5>Tentang Jalanterus.com</h5>
+        <p>Cara Pesan <br>
+          Hubungi Kami <br>
+          Pusat Bantuan <br>
+          Tentang Kami</p>
+
+          <h5>Follow kami di</h5>
+        <p>Instagram <br>
+          Twitter <br>
+          Facebook <br>
+          Youtube</p>
+      </div>
+      <div class="col-3" >
+        <h5>Produk Kami</h5>
+        <p>Tiket Pesawat <br>
+          Refund Tiket <br>
+          Reschedule Tiket</p>
+      </div>
+      <div class="col-3">
+        <h5>Download Jalanterus APP</h5>
+        <img src="/frontend/img/download-app.png" width="100%">
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-12">
+          <h4>
+            2025 Copyright Jalanterus.com. All Right Reserved.
+          </h4>
+        </div>
+      </div>
+
+  </div>
+    </section>
+
+<!--TUTUP FOOTER-->
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="/frontend/libraries/bootstrap/js/bootstrap.js"></script>
+    <script>
+      $(document).ready(function() {
+  $(".search").keyup(function () {
+    var searchTerm = $(".search").val();
+    var listItem = $('.results tbody').children('tr');
+    var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+    
+  $.extend($.expr[':'], {'containsi': function(elem, i, match, array){
+        return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+    }
+  });
+    
+  $(".results tbody tr").not(":containsi('" + searchSplit + "')").each(function(e){
+    $(this).attr('visible','false');
+  });
+
+  $(".results tbody tr:containsi('" + searchSplit + "')").each(function(e){
+    $(this).attr('visible','true');
+  });
+
+  var jobCount = $('.results tbody tr[visible="true"]').length;
+    $('.counter').text(jobCount + ' item');
+
+  if(jobCount == '0') {$('.no-result').show();}
+    else {$('.no-result').hide();}
+		  });
+});
+    </script>
+
+  </body>
+</html>

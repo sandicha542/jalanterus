@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/frontend/libraries/bootstrap/css/bootstrap.css">
+    <!--My Css-->
+    <link rel="stylesheet" href="/frontend/style/main.css">
+
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/frontend/img/favicon.png">
+    <title>Booking Page</title>
+  </head>
+  
+  <body>
+<!--Header-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="/pages/index.html">Jalanterus<span style="color:#2C7FCB;">.com</span>
+          <img src="/frontend/img/favicon.png" alt="">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+				<img src="/frontend/img/PESAN.png">
+			  </a>
+            </li>
+            <button class="cancel-button">
+              <a class="nav-link" href="index.html"><span style="color: white;">CANCEL</span></a>
+            </button>
+          </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
+<!--TUTUP Header-->
+<div class="bg-color">
+<!--TIME COUNTDOWN-->
+<div class="timer-order timer">
+	Mohon selesaikan pesanan dalam 
+	<input id="hours" class="timer-order-text" placeholder="00"disabled> : 
+	<input id="minutes" class="timer-order-text" disabled> : 
+	<input id="seconds" class="timer-text22 timer-order-text"disabled>
+</div>
+<!--TUTUP TIME COUNTDOWN-->
+
+<!--PROGRES INDIKATOR-->
+<section class="indikator-progres">
+    <div class="container">
+      <div class="row">
+        <div class="col-3"></div>
+
+        <div class="col-2">
+          <p style="font-weight: 600; color: black;">1. PESAN</p>
+        </div>
+        <div class="col-2">
+          <P>2. BAYAR</P>
+        </div>
+        <div class="col-2">
+          <P>3. SELESAI</P>
+        </div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+</section>
+<!--TUTUP PROGRES INDIKATOR-->
+
+
+<!--DETAIL PEMESAN-->
+<section class="pemesan">
+  <div class="container">
+	<div class="detail-pemesan">
+
+		<div class="title-section">
+		Detail Pemesan
+		</div>
+
+		<!--PEMESAN DATA-->
+		<div class="row">
+			<div class="col-6">
+				<input type="text" placeholder="Nama Depan" id="nama"><label for="nama">Isi sesuai KTP/Paspor/SIM (tanpa tanda baca dan gelar)</label>
+			</div>
+			<div class="col-6">
+				<input type="text" placeholder="Nama Belakang">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<input type="text" placeholder="No. Telepon">
+			</div>
+			<div class="col-6">
+				<input type="text" placeholder="Alamat Email" id="email"><label for="email">E-ticket akan dikirim ke alamat Email ini.</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<input type="text" placeholder="Alamat" style="width: 97.5%;" id="alamat"><label for="alamat">Isi sesuai KTP/Paspor/SIM
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4">
+				<input type="text" placeholder="Provinsi">
+			</div>
+			<div class="col-4">
+				<input type="text" placeholder="Kota">
+			</div>
+			<div class="col-4">
+				<input type="text" placeholder="Kode Pos">
+			</div>
+		</div>
+	</div>
+  </div>
+</section>
+<!--TUTUP DETAIL PEMESAN-->
+
+<!--DETAIL PENUMPANG-->
+<section class="detail-penumpang">
+	<div class="container">
+		<div class="penumpang">
+			<div class="title-section-kolom2">
+				Detail Penumpang
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<table>
+						<tr>
+							<td style="padding-bottom:25px;">
+								Jumlah Penumpang
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="number" id="jumlah-dewasa" min="0" max="10" placeholder="0">
+								<label for="jumlah-dewasa">
+								Dewasa
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="number" id="jumlah-anak" min="0" max="10"placeholder="0">
+								<label for="jumlah-anak">
+								Anak-Anak
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="number" id="jumlah-bayi" min="0" max="10"placeholder="0">
+								<label for="jumlah-bayi">
+								Bayi
+								</label>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-3">
+					<div class="rincian-umur">
+						<table>
+							<tr>
+								<td style="width:95px;">
+									Dewasa
+								</td>
+								<td>
+									Usia 12+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Anak-anak
+								</td>
+								<td>
+									Usia 2-11
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Bayi
+								</td>
+								<td>
+									Di bawah 2
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="nama-penumpang">
+						<p>List Nama Penumpang</p>
+						<div id="newtask">
+							<input type="text" placeholder="Nama Lengkap Penumpang">
+							<button id="push">Tambah</button>
+						</div>
+						<div id="tasks"></div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--TUTUP DETAIL PENUMPANG-->
+
+
+<!--DETAIL PENERBANGAN DAN PEMBAYARAN-->
+<section class="detail-penerbangan-pembayaran">
+	<div class="container"> 
+		<div class="flex-wrapper">
+			<div class="flex-item">
+				<div class="title-section-kolom2">
+					Detail Penerbangan
+				</div>
+				<div class="detail-penerbangan">
+					<table>
+						<tr>
+							<td class="sub-judul">
+								Penerbangan
+							</td>
+							<td>
+								<input type="text" value="Jakarta"disabled>
+							</td>
+							<td>
+								<input type="text" value="Surabaya"disabled>
+							</td>
+						</tr>
+						<tr>
+							<td class="sub-judul">
+								Jadwal
+							</td>
+							<td colspan="2" >
+								<input type="text" value="Selasa, 25 Oktober 2022"style="width: 100%;"disabled>
+							</td>
+							<td>
+
+							</td>
+						</tr>
+						<tr>
+							<td class="sub-judul">
+								Maskapai
+							</td>
+							<td colspan="2" >
+								<input type="text" value="Lion Air"style="width: 100%;" disabled>
+							</td>
+							<td>
+
+							</td>
+						</tr>
+						<tr>
+							<td class="sub-judul">
+								Kebijakan Tiket
+							</td>
+							<td colspan="2" >
+								<img src="/frontend/img/refund.png"> bisa refund
+								<br>
+								<img src="/frontend/img/reschedule.png"> bisa refund
+							</td>
+							<td>
+
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		  
+			<div class="flex-item">
+				<div class="title-section-kolom2">
+					Metode Pembayaran
+				</div>
+					<div class="metode-pembayaran">
+						<table>
+							<tr>
+								<td class="sub-judul">
+									Transfer Bank
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="/frontend/img/bank-bca.png">
+								</td>
+								<td>
+									<input type="radio" name="metode-pembayaran" id="bank-bca">
+									<label for="bank-bca">
+									Transfer Bank BCA
+									</label>
+									<br>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<img src="/frontend/img/bank-mandiri.png">
+								</td>
+								<td>
+									<input type="radio" name="metode-pembayaran" id="bank-mandiri">
+									<label for="bank-mandiri">
+									Transfer Bank Mandiri
+									</label>
+									<br>
+								</td>
+							</tr>
+
+							<tr>
+								<td class="sub-judul">
+									Virtual Wallet
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="/frontend/img/gopay.png">
+								</td>
+								<td>
+									<input type="radio" name="metode-pembayaran" id="gopay">
+									<label for="gopay">
+									Pembayaran Gopay
+									</label>
+									<br>
+								</td>
+							</tr>
+
+							<tr>
+								<td class="sub-judul">
+									Gerai Retail
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="/frontend/img/indomaret.png">
+								</td>
+								<td>
+									<input type="radio" name="metode-pembayaran" id="indomaret">
+									<label for="indomaret">
+									Pembayaran indomaret
+									</label>
+									<br>
+								</td>
+							</tr>
+
+						</table>
+					</div>
+			</div>
+		  </div>
+	</div>
+</section>
+<!--TUTUP DETAIL PENERBANGAN-->
+
+<!--Lanjut ke Pembayaran-->
+<section>
+	<div class="container">
+		<div class="button-lanjut-pembayaran">
+			<div class="col-12">
+			  	<div class="form-check" style="margin-bottom: 15px;">
+					<input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+					<label class="form-check-label" for="invalidCheck2">
+					Agree to terms and conditions
+					</label>
+				</div>				
+				<!-- Button trigger modal -->
+			<button type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+			Lanjut Ke Pembayaran
+  			</button>
+
+			</div>
+
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalCenterTitle">KONFIRMASI</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		Apakah Data yang diisikan Sudah Benar ?
+
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+		  <a href="/pages/payment-page.html">
+			<button type="button" class="btn btn-primary">Lanjut Ke Pembayaran
+			</button>
+		  </a>
+		</div>
+	  </div>
+	</div>
+ 	</div>
+</section>
+<!--DETAIL Lanjut ke Pembayaran-->
+
+</div><!--FOOTER-->
+    <section class="footer-booking-page">
+
+  <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4>
+            2025 Copyright Jalanterus.com. All Right Reserved.
+          </h4>
+        </div>
+      </div>
+
+  </div>
+    </section>
+<!--TUTUP FOOTER-->
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="/frontend/libraries/bootstrap/js/bootstrap.js"></script>
+<!--SCRIPT NAMBAH LIST NAMA PENUMPANG-->
+	<script>
+		document.querySelector('#push').onclick = function(){
+    if(document.querySelector('#newtask input').value.length == 0){
+        alert("Kindly Enter Task Name!!!!")
+    }
+
+    else{
+        document.querySelector('#tasks').innerHTML += `
+            <div class="task">
+                <span id="taskname">
+                    ${document.querySelector('#newtask input').value}
+                </span>
+                <button class="delete">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </div>
+        `;
+
+        var current_tasks = document.querySelectorAll(".delete");
+        for(var i=0; i<current_tasks.length; i++){
+            current_tasks[i].onclick = function(){
+                this.parentNode.remove();
+            }
+        }
+    }
+}
+	</script>
+<!--TUTUP SCRIPT NAMBAH LIST NAMA PENUMPANG-->
+
+<!--SCRIPT TIMER COUNTDOWN-->
+	<script>
+		function Timer( minuteId, secondsId, initValue ){
+	
+	this.minutes = initValue;
+	
+	this.seconds = initValue * 60;
+	
+	this.minuteElement = document.getElementById( minuteId );
+	
+	this.secondElement = document.getElementById( secondsId );  
+	
+	this.decrement = function(){
+		
+		if( this.seconds < 59 ){
+			this.secondElement.value = this.seconds;
+		} else {
+			this.minuteElement.value = this.getMinutes();
+			this.secondElement.value = this.getSeconds();
+		}
+		
+		this.seconds--;    
+		setTimeout( this.decrement.bind( this ), 1000 );
+		
+	};
+	
+	this.getMinutes = function(){
+		this.minutes = Math.floor( this.seconds / 60 );
+		return this.minutes;
+	};
+	
+	this.getSeconds = function(){
+		return this.seconds - Math.round( this.minutes * 60 );
+	};
+	
+	this.start = function(){
+		this.decrement();
+	};
+	
+	return this;
+	
+	}
+
+	// first 2 params are the input id values, last is the intial minute value
+	var timer = new Timer( "minutes", "seconds", 30 ); 
+
+	timer.start();
+
+	</script>
+<!--TUTUP SCRIPT TIMER COUNTDOWN-->
+
+
+  </body>
+</html>

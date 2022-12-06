@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/frontend/libraries/bootstrap/css/bootstrap.css">
+    <!--My Css-->
+    <link rel="stylesheet" href="/frontend/style/main.css">
+
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/frontend/img/favicon.png">
+    <title>Pencarian</title>
+  </head>
+  
+  <body>
+<!--Header-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="/pages/index.html">Jalanterus<span style="color:#2C7FCB;">.com</span>
+          <img src="/frontend/img/favicon.png" alt="">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/index.html">Promo Tiket</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cek-order.html">Cek Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  data-toggle="modal" data-target="#modal-masuk" style="cursor: pointer;">Masuk</a>
+            </li>
+            <button class="nav-item">
+              <a class="nav-link"  data-toggle="modal" data-target="#modal-daftar"><span style="color: white;">Daftar</span></a>
+            </button>
+        </div>
+        </div>
+      </nav>
+    </header>
+
+      <!--MODAL DAFTAR-->
+      <div class="modal fade" id="modal-daftar" tabindex="-1" role="dialog" aria-labelledby="modal-daftarTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-daftarTitle">DAFTAR</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          
+          </div>
+          
+          <form>
+                <div class="modal-body">               
+                  Silakan isi formulir ini untuk membuat akun.
+                    <br><br>
+                  <label for="email-daftar">Email</label><br>
+                  <input type="text" name="form-daftar" id="email-daftar" placeholder="enter email">
+                    <br>
+                  <label for="password-daftar">Pasword</label><br>
+                  <input type="password" name="form-daftar" id="password-daftar" placeholder="enter password">
+                    <br>
+                  <label for="password-daftar">Repeat Password</label><br>
+                  <input type="password" name="form-daftar" id="password-daftar" placeholder="repeat password">
+                    <br>
+                  <input type="checkbox" name="form-daftar" id="remember-me">
+  
+                  By creating an account you agree to our <a href="#">Terms & Privacy.</a>
+                </div>
+  
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                  <a href="#">
+                  <button type="submit" class="btn btn-primary">Daftar
+                  </button>
+                  </a>
+                </div>
+          </form>
+  
+          </div>
+        </div>
+         </div>
+    <!--MODAL DAFTAR-->
+  
+      <!--MODAL MASUK-->
+      <div class="modal fade" id="modal-masuk" tabindex="-1" role="dialog" aria-labelledby="modal-masukTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-masukTitle">Masuk</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          
+          </div>
+          
+          <form>
+                <div class="modal-body">               
+                  <label for="email-masuk">Email</label><br>
+                  <input type="text" name="form-masuk" id="email-masuk" placeholder="enter email">
+                    <br>
+                  <label for="password-masuk">Pasword</label><br>
+                  <input type="password" name="form-masuk" id="password-masuk" placeholder="enter password">
+                    <br>
+  
+                    <br>
+                  <input type="checkbox" name="form-masuk" id="remember-me">
+                  Remember me   |
+                  <a href="#" style="text-align: right;">Lupa Password ?</a>
+                </div>
+  
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                  <a href="#">
+                  <button type="submit" class="btn btn-primary">Masuk
+                  </button>
+                  </a>
+                </div>
+          </form>
+  
+          </div>
+        </div>
+         </div>
+    <!--MODAL MASUK-->
+<!--TUTUP Header-->
+
+<div class="main-background">
+
+
+<!--FILTER SEARCH-->
+<section class="filter-search">
+  <div class="container">
+    <div class="filter">
+      <div class="row row-cols-5">
+
+        <div class="col">
+          <label for="Dari">Dari <br>
+              <select id="Dari" class="pencarian">
+                  <option value="volvo">Jakarta</option>
+                  <option value="saab">Bali</option>
+                  <option value="opel">Riau</option>
+                  <option value="audi">NTT</option>
+                  <option value="audi">Singapura</option>
+                  <option value="audi">Kep. Riau</option>
+                  <option value="audi">Jawa Barat</option>
+              </select></label>
+        </div>
+
+        <div class="col">
+          <label for="Ke">Ke <br>
+              <select id="Ke" class="pencarian">
+                  <option value="volvo">Jakarta</option>
+                  <option value="saab">Bali</option>
+                  <option value="opel">Riau</option>
+                  <option value="audi">NTT</option>
+                  <option value="audi">Singapura</option>
+                  <option value="audi">Kep. Riau</option>
+                  <option value="audi">Jawa Barat</option>
+              </select></label>
+        </div> 
+
+        <div class="col">
+          <label for="Keberangkatan">Keberangkatan <br>
+              <input type="date" class="tanggal" id="keberangkatan"></label>
+        </div>
+
+        <div class="col">
+              <label for="Pulang">Pulang <span style="font-size:13px;">(opsional)</span> <input type="checkbox" id="checkbox"/><br>
+              <input type="date" class="tanggal" id="kepulangan" disabled></label>
+        </div>
+
+        <div class="col">
+          <label for="Kelas-Tiket">Kelas Tiket <br>
+              <select id="Kelas-Tiket" class="pencarian" style="width: 140px;">
+                  <option value="volvo">Ekonomi</option>
+                  <option value="saab">Ekonomi Premium</option>
+                  <option value="opel">Bisnis</option>
+                  <option value="audi">Utama</option>
+                  <option value="audi">Quiet Zone</option>
+              </select></label>
+        </div>
+  
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--TUTUP FILTER SEARCH-->
+
+<!--GANTI PENCARIAN-->
+<section class="section-pencarian">
+  <div class="container">
+    <div class="ganti-pencarian">
+          <div class="row">
+        <div class="col-6">
+                <h4>
+                  PILIHAN TIKET
+                </h4>
+                <P>
+                  Jakarta (JKTC) ke Surabaya (SUBC) | SELASA, 25-11-2022 | Ekonomi 
+                </P>
+        </div>
+        <div class="col-4"></div>
+        <div class="col-2">
+            <a href="form-perjalanan.html">
+              <button>
+                Ganti Pencarian
+              </button>
+            </a>
+        </div>
+    </div>
+    </div>
+
+
+  </div>
+</section>
+<!--TUTUP GANTI PENCARIAN-->
+
+<!--HASIL PENCARIAN-->
+<section class="'hasil-pencarian">
+  <div class="bg-color">
+    <div class="container">
+
+    <div class="tabel-hasil">
+      <div class="row">
+        <div class="col-2">
+          <img src="/frontend/img/maskapai1.png">
+        </div>
+        <div class="col-5">
+          <div class="row">
+            <div class="col-4">
+                  <h4>03.40</h4>
+                  <h5>Jakarta (JKTC)</h5>
+            </div>
+            <div class="col-4">
+                  <h5>1 jam 30 menit</h5>
+                  <h5>langsung</h5>
+            </div>
+            <div class="col-4">
+                  <h4>05:10</h4>
+                  <h5>Surabaya (SUBC)</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <a href="#"><p>Detail Penerbangan</p></a>
+          <a href="#"><p>Detail Harga</p></a>
+          <a href="#"><p>Kebijakan</p></a>
+        </div>
+        <div class="col-3">
+          <a href="booking-pages.html">
+            <button>
+            PILIH
+            </button></a>
+          <h5 style="text-decoration:none">IDR 1.817.200/orang</h5>
+          <a href="#"><p>fasilitas</p></a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="tabel-hasil">
+      <div class="row">
+        <div class="col-2">
+          <img src="/frontend/img/maskapai3.png">
+        </div>
+        <div class="col-5">
+          <div class="row">
+            <div class="col-4">
+                  <h4>03.40</h4>
+                  <h5>Jakarta (JKTC)</h5>
+            </div>
+            <div class="col-4">
+                  <h5>1 jam 30 menit</h5>
+                  <h5>langsung</h5>
+            </div>
+            <div class="col-4">
+                  <h4>05:10</h4>
+                  <h5>Surabaya (SUBC)</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <a href="#"><p>Detail Penerbangan</p></a>
+          <a href="#"><p>Detail Harga</p></a>
+          <a href="#"><p>Kebijakan</p></a>
+        </div>
+        <div class="col-3">
+          <a href="booking-pages.html">
+            <button>
+            PILIH
+            </button></a>
+          <h5 style="text-decoration:none">IDR 1.817.200/orang</h5>
+          <a href="#"><p>fasilitas</p></a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="tabel-hasil">
+      <div class="row">
+        <div class="col-2">
+          <img src="/frontend/img/maskapai2.png">
+        </div>
+        <div class="col-5">
+          <div class="row">
+            <div class="col-4">
+                  <h4>03.40</h4>
+                  <h5>Jakarta (JKTC)</h5>
+            </div>
+            <div class="col-4">
+                  <h5>1 jam 30 menit</h5>
+                  <h5>langsung</h5>
+            </div>
+            <div class="col-4">
+                  <h4>05:10</h4>
+                  <h5>Surabaya (SUBC)</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <a href="#"><p>Detail Penerbangan</p></a>
+          <a href="#"><p>Detail Harga</p></a>
+          <a href="#"><p>Kebijakan</p></a>
+        </div>
+        <div class="col-3">
+          <a href="booking-pages.html">
+            <button>
+            PILIH
+            </button></a>
+          <h5 style="text-decoration:none">IDR 1.817.200/orang</h5>
+          <a href="#"><p>fasilitas</p></a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="tabel-hasil">
+      <div class="row">
+        <div class="col-2">
+          <img src="/frontend/img/maskapai1.png">
+        </div>
+        <div class="col-5">
+          <div class="row">
+            <div class="col-4">
+                  <h4>03.40</h4>
+                  <h5>Jakarta (JKTC)</h5>
+            </div>
+            <div class="col-4">
+                  <h5>1 jam 30 menit</h5>
+                  <h5>langsung</h5>
+            </div>
+            <div class="col-4">
+                  <h4>05:10</h4>
+                  <h5>Surabaya (SUBC)</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <a href="#"><p>Detail Penerbangan</p></a>
+          <a href="#"><p>Detail Harga</p></a>
+          <a href="#"><p>Kebijakan</p></a>
+        </div>
+        <div class="col-3">
+          <a href="booking-pages.html">
+            <button>
+            PILIH
+            </button></a>
+          <h5 style="text-decoration:none">IDR 1.817.200/orang</h5>
+          <a href="#"><p>fasilitas</p></a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="tabel-hasil">
+      <div class="row">
+        <div class="col-2">
+          <img src="/frontend/img/maskapai1.png">
+        </div>
+        <div class="col-5">
+          <div class="row">
+            <div class="col-4">
+                  <h4>03.40</h4>
+                  <h5>Jakarta (JKTC)</h5>
+            </div>
+            <div class="col-4">
+                  <h5>1 jam 30 menit</h5>
+                  <h5>langsung</h5>
+            </div>
+            <div class="col-4">
+                  <h4>05:10</h4>
+                  <h5>Surabaya (SUBC)</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <a href="#"><p>Detail Penerbangan</p></a>
+          <a href="#"><p>Detail Harga</p></a>
+          <a href="#"><p>Kebijakan</p></a>
+        </div>
+        <div class="col-3">
+          <a href="booking-pages.html">
+            <button>
+            PILIH
+            </button></a>
+          <h5 style="text-decoration:none">IDR 1.817.200/orang</h5>
+          <a href="#"><p>fasilitas</p></a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="tabel-hasil">
+      <div class="row">
+        <div class="col-2">
+          <img src="/frontend/img/maskapai2.png">
+        </div>
+        <div class="col-5">
+          <div class="row">
+            <div class="col-4">
+                  <h4>03.40</h4>
+                  <h5>Jakarta (JKTC)</h5>
+            </div>
+            <div class="col-4">
+                  <h5>1 jam 30 menit</h5>
+                  <h5>langsung</h5>
+            </div>
+            <div class="col-4">
+                  <h4>05:10</h4>
+                  <h5>Surabaya (SUBC)</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <a href="#"><p>Detail Penerbangan</p></a>
+          <a href="#"><p>Detail Harga</p></a>
+          <a href="#"><p>Kebijakan</p></a>
+        </div>
+        <div class="col-3">
+          <a href="booking-pages.html">
+            <button>
+            PILIH
+            </button></a>
+          <h5 style="text-decoration:none">IDR 1.817.200/orang</h5>
+          <a href="#"><p>fasilitas</p></a>
+        </div>
+      </div>
+      
+    </div>
+</div>
+  </div>
+</section>
+<!--TUTUP HASIL PENCARIAN-->
+
+</div>
+
+<!--FOOTER-->
+    <section class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <h2>
+          <span style="color:#ffffff;">Jalanterus</span><span style="color:#2C7FCB;">.com</span>
+        </h2> <br>
+          <h5>
+            Partner Pembayaran <br> <br>
+          </h5>
+          <img src="/frontend/img/bank-bca.png"> <br> <br>
+          <img src="/frontend/img/bank-mandiri.png">
+      </div>
+      <div class="col-3">
+        <h5>Tentang Jalanterus.com</h5>
+        <p>Cara Pesan <br>
+          Hubungi Kami <br>
+          Pusat Bantuan <br>
+          Tentang Kami</p>
+
+          <h5>Follow kami di</h5>
+        <p>Instagram <br>
+          Twitter <br>
+          Facebook <br>
+          Youtube</p>
+      </div>
+      <div class="col-3" >
+        <h5>Produk Kami</h5>
+        <p>Tiket Pesawat <br>
+          Refund Tiket <br>
+          Reschedule Tiket</p>
+      </div>
+      <div class="col-3">
+        <h5>Download Jalanterus APP</h5>
+        <img src="/frontend/img/download-app.png" width="100%">
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-12">
+          <h4>
+            2025 Copyright Jalanterus.com. All Right Reserved.
+          </h4>
+        </div>
+      </div>
+
+  </div>
+    </section>
+
+<!--TUTUP FOOTER-->
+
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="/frontend/libraries/bootstrap/js/bootstrap.js"></script>
+
+    <!--DISABLE KEPULANGAN-->
+        <script>
+          $('#checkbox').click(function() {
+      if (this.checked) {
+          $('#kepulangan').prop('disabled', false); // If checked enable item      
+      } else {
+          $('#kepulangan').prop('disabled', true); // If checked disable item                  
+      }
+      });
+      </script>
+    <!--TUTUP DISABLE KEPULANGAN-->
+
+
+  </body>
+</html>
