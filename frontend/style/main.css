@@ -85,7 +85,7 @@
 
 /*HERO*/
 .hero-section {
-    background-image: url(/frontend/img/hero.jpeg);
+    background-image: url(/jalanterus/frontend/img/hero.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -355,7 +355,7 @@
 
 /*HERO FORM PERJALANAN*/
 .hero-section-form-perjalanan {
-  background-image: url(/frontend/img/hero.jpeg);
+  background-image: url(/jalanterus/frontend/img/hero.jpeg);
   background-repeat: no-repeat;
   padding-top: 50px;
   padding-bottom: -20px;
@@ -788,7 +788,7 @@
   font-weight: 300;
 }
 .task button{
-  background-image: url(/frontend/img/close.png);
+  background-image: url(/jalanterus/frontend/img/close.png);
   background-repeat: no-repeat;
   mix-blend-mode: color-burn;
   border: none;
