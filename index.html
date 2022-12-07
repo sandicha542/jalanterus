@@ -148,7 +148,7 @@
                 <form action="/jalanterus/pages/form-perjalanan.html">
                 <div class="form-group has-search">
                     <span class="fa fa-search form-control-feedback"></span>
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" placeholder="Cari tempat wisata di Indonesia" id="searchBar">
                   </div>
                 </form>
                   <a href="#"><p>Jakarta  -  Bali  -  Riau  -  NTT  - Singapura  -  Kep Riau  -  Jawa Barat</p></a>
@@ -443,8 +443,21 @@
             this.className += " active";
           });
         }
-        </script>
+    </script>
 
+    <script>
+      var searchTerms = ["Pantai Bali", "Gunung Bromo", "Taman Mini Indonesia Indah", "Danau Toba", "Pulau Komodo"];
+      var counter = 0;
+
+      setInterval(function() {
+          document.getElementById("searchBar").placeholder = searchTerms[counter];
+          counter++;
+          if (counter >= searchTerms.length) {
+              counter = 0;
+          }
+      }, 2000);
+    </script>
 
   </body>
 </html>
+
