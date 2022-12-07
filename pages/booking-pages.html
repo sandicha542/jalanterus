@@ -46,12 +46,10 @@
     </header>
 <!--TUTUP Header-->
 <div class="bg-color">
+
 <!--TIME COUNTDOWN-->
 <div class="timer-order timer">
-	Mohon selesaikan pesanan dalam 
-	<input id="hours" class="timer-order-text" placeholder="00"disabled> : 
-	<input id="minutes" class="timer-order-text" disabled> : 
-	<input id="seconds" class="timer-text22 timer-order-text"disabled>
+	<div id="timer"></div>
 </div>
 <!--TUTUP TIME COUNTDOWN-->
 
@@ -111,10 +109,25 @@
 		</div>
 		<div class="row">
 			<div class="col-4">
-				<input type="text" placeholder="Provinsi">
+				<select id="provinsi">
+					<option value="-">Pilih Provinsi</option>
+					<option value="Aceh">Aceh</option>
+					<option value="Bali">Bali</option>
+					<option value="Banten">Banten</option>
+					<option value="Bengkulu">Bengkulu</option>
+					<option value="Gorontalo">Gorontalo</option>
+					<option value="Jakarta">Jakarta</option>
+					<option value="Jambi">Jambi</option>
+					<option value="Jawa Barat">Jawa Barat</option>
+					<option value="Jawa Tengah">Jawa Tengah</option>
+				</select><label for="provinsi">Provinsi
+				</label>
 			</div>
 			<div class="col-4">
-				<input type="text" placeholder="Kota">
+				<select id="kota">
+					...
+				</select><label for="provinsi">Kota
+				</label>
 			</div>
 			<div class="col-4">
 				<input type="text" placeholder="Kode Pos">
@@ -460,58 +473,51 @@
 	</script>
 <!--TUTUP SCRIPT NAMBAH LIST NAMA PENUMPANG-->
 
-<!--SCRIPT TIMER COUNTDOWN-->
+    <!--SCRIPT TIMER COUNTDOWN-->
 	<script>
-		function Timer( minuteId, secondsId, initValue ){
-	
-	this.minutes = initValue;
-	
-	this.seconds = initValue * 60;
-	
-	this.minuteElement = document.getElementById( minuteId );
-	
-	this.secondElement = document.getElementById( secondsId );  
-	
-	this.decrement = function(){
-		
-		if( this.seconds < 59 ){
-			this.secondElement.value = this.seconds;
-		} else {
-			this.minuteElement.value = this.getMinutes();
-			this.secondElement.value = this.getSeconds();
-		}
-		
-		this.seconds--;    
-		setTimeout( this.decrement.bind( this ), 1000 );
-		
-	};
-	
-	this.getMinutes = function(){
-		this.minutes = Math.floor( this.seconds / 60 );
-		return this.minutes;
-	};
-	
-	this.getSeconds = function(){
-		return this.seconds - Math.round( this.minutes * 60 );
-	};
-	
-	this.start = function(){
-		this.decrement();
-	};
-	
-	return this;
-	
-	}
+        // menetapkan waktu maksimal (dalam detik)
+var maxTime = 1800; // 3 jam
 
-	// first 2 params are the input id values, last is the intial minute value
-	var timer = new Timer( "minutes", "seconds", 30 ); 
+// menetapkan elemen HTML yang akan menampilkan waktu
+var timerEl = document.getElementById("timer");
 
-	timer.start();
+// menetapkan fungsi yang akan dipanggil setiap detiknya
+function updateTimer() {
+  // mengurangi waktu maksimal sebanyak 1 detik
+  maxTime--;
 
-	</script>
-<!--TUTUP SCRIPT TIMER COUNTDOWN-->
+  // menghitung jam, menit, dan detik
+  var hours = Math.floor(maxTime / 3600);
+  var minutes = Math.floor(maxTime % 3600 / 60);
+  var seconds = maxTime % 60;
 
-<!--SCRIPT TIMER COUNTDOWN-->
+  // menambahkan angka 0 di depan jika waktu hanya memiliki satu digit
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+
+  // menampilkan waktu maksimal dalam format HH:MM:SS
+  timerEl.innerHTML = "Mohon selesaikan pembayaran dalam " + hours + ":" + minutes + ":" + seconds;
+
+  // jika waktu habis, menutup halaman
+  if (maxTime == 0) {
+    window.close();
+  }
+}
+
+// menjalankan fungsi updateTimer setiap detiknya
+setInterval(updateTimer, 1000);
+
+      </script>
+    <!--TUTUP SCRIPT TIMER COUNTDOWN-->
+
+<!--SCRIPT MENGHITUNG KATEGORI PENUMPANG-->
 	<script>
 	// Ambil semua input jumlah penumpang
 	const adultInput = document.getElementById('adult');
@@ -534,8 +540,47 @@
 	childInput.addEventListener('change', updateTotalPassenger);
 	babyInput.addEventListener('change', updateTotalPassenger);
   	</script>
-<!--TUTUP SCRIPT TIMER COUNTDOWN-->
+<!--TUTUP SCRIPT MENGHITUNG KATEGORI PENUMPANG-->
 
+<!--SCRIPT PILIH KOTA-->
+	<script>
+		// Daftar provinsi dan kota di Indonesia
+const provinces = {
+  "-": ["Pilih Kabupaten"],
+  "Aceh": ["Banda Aceh", "Sabang", "Lhokseumawe", "Langsa", "Lhoksukon", "Meulaboh", "Subulussalam"],
+  "Bali": ["Denpasar", "Badung", "Gianyar", "Jembrana", "Tabanan", "Bangli", "Klungkung", "Karangasem", "Buleleng", "Singaraja"],
+  "Banten": ["Serang", "Tangerang", "Cilegon", "Pandeglang", "Rangkasbitung", "Lebak", "Tangerang Selatan"],
+  "Bengkulu": ["Bengkulu", "Rejang Lebong", "Bengkulu Selatan", "Bengkulu Tengah", "Bengkulu Utara", "Kaur", "Kepahiang", "Lebong", "Mukomuko", "Seluma"],
+  "Gorontalo": ["Gorontalo", "Boalemo", "Bone Bolango", "Gorontalo Utara", "Pohuwato"],
+  "Jakarta": ["Jakarta Pusat", "Jakarta Utara", "Jakarta Timur", "Jakarta Selatan", "Jakarta Barat"],
+  "Jambi": ["Jambi", "Bungo", "Kerinci", "Merangin", "Muaro Jambi", "Sarolangun", "Batanghari", "Tanjung Jabung Barat", "Tanjung Jabung Timur", "Tebo"],
+  "Jawa Barat": ["Bogor", "Sukabumi", "Cianjur", "Bandung", "Garut", "Tasikmalaya", "Ciamis", "Kuningan", "Cirebon", "Majalengka", "Sumedang", "Indramayu", "Subang", "Purwakarta", "Karawang", "Bekasi", "Banjar", "Cimahi", "Depok", "Bogor"],
+  "Jawa Tengah": ["Semarang", "Salatiga", "Surakarta", "Tegal", "Pekalongan", "Pemalang", "Cilacap", "Banjarnegara", "Banyumas", "Kebumen", "Purworejo", "Wonosobo", "Magelang", "Boyolali", "Karanganyar", "Sragen", "Suwalangi", "Klaten", "Wonogiri", "Blora", "Rembang", "Pati", "Jepara", "Demak", "Kudus", "Madiun", "Magetan", "Ngawi", "Boja", "Mojokerto", "Sidoarjo", "Jombang", "Nganjuk", "Makassar"],
+};
+
+// Ambil elemen <select> provinsi dan kota
+const provinceSelect = document.getElementById("provinsi");
+const citySelect = document.getElementById("kota");
+
+// Tambahkan event listener untuk elemen <select> provinsi
+provinceSelect.addEventListener("change", function() {
+  // Ambil provinsi yang dipilih oleh pengguna
+  const selectedProvince = this.value;
+
+  // Bersihkan elemen <select> kota
+  citySelect.innerHTML = "";
+
+  // Tambahkan opsi pilihan kota sesuai dengan provinsi yang dipilih
+  provinces[selectedProvince].forEach(function(city) {
+    const option = document.createElement("option");
+    option.value = city;
+    option.textContent = city;
+    citySelect.appendChild(option);
+  });
+});
+
+	</script>
+<!--SCRIPT PILIH KOTA-->
 
   </body>
 </html>

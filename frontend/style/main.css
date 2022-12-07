@@ -698,6 +698,19 @@
   outline: none;
   border: 2px solid #0d75ec;
 }
+.detail-pemesan select {
+  width: 95%;
+  padding-left: 15px;  
+  padding-right: 15px;
+  border: 1px solid #929FB8;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.detail-pemesan select:focus {
+  outline: none;
+  border: 2px solid #0d75ec;
+}
 /*TUTUP PEMESAN*/
 
 /*PENUMPANG*/
