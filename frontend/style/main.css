@@ -698,7 +698,7 @@
   outline: none;
   border: 2px solid #0d75ec;
 }
-.pemesan .detail-pemesan select {
+.pemesan .detail-pemesan select #provinsi{
   width: 95%;
   padding-left: 15px;  
   padding-right: 15px;
@@ -707,7 +707,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.pemesan .detail-pemesan select:focus {
+.pemesan .detail-pemesan select:focus #provinsi {
   outline: none;
   border: 2px solid #0d75ec;
 }
