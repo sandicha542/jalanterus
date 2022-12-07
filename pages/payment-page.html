@@ -246,7 +246,7 @@
     <script src="/jalanterus/frontend/libraries/bootstrap/js/bootstrap.js"></script>
     <!--SCRIPT TIMER COUNTDOWN-->
       <script>
-// menetapkan waktu maksimal (dalam detik)
+        // menetapkan waktu maksimal (dalam detik)
 var maxTime = 10800; // 3 jam
 
 // menetapkan elemen HTML yang akan menampilkan waktu
@@ -262,6 +262,17 @@ function updateTimer() {
   var minutes = Math.floor(maxTime % 3600 / 60);
   var seconds = maxTime % 60;
 
+  // menambahkan angka 0 di depan jika waktu hanya memiliki satu digit
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+
   // menampilkan waktu maksimal dalam format HH:MM:SS
   timerEl.innerHTML = "Mohon selesaikan pembayaran dalam " + hours + ":" + minutes + ":" + seconds;
 
@@ -273,7 +284,6 @@ function updateTimer() {
 
 // menjalankan fungsi updateTimer setiap detiknya
 setInterval(updateTimer, 1000);
-
 
       </script>
     <!--TUTUP SCRIPT TIMER COUNTDOWN-->
