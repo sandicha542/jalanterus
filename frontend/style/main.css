@@ -1091,3 +1091,7 @@
 .hot-promo tr {
   background-color: white;
 }
+
+#totalPassenger {
+  width: 110%;
+}

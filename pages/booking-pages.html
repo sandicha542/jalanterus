@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/jalanterus/frontend/libraries/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/frontend/libraries/bootstrap/css/bootstrap.css">
     <!--My Css-->
-    <link rel="stylesheet" href="/jalanterus/frontend/style/main.css">
+    <link rel="stylesheet" href="/frontend/style/main.css">
 
     <!-- Google Font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -142,7 +142,7 @@
 						</tr>
 						<tr>
 							<td>
-								<input type="number" id="jumlah-dewasa" min="0" max="10" placeholder="0">
+								<input type="number" id="adult" value="0" min="0" max="15">
 								<label for="jumlah-dewasa">
 								Dewasa
 								</label>
@@ -150,7 +150,7 @@
 						</tr>
 						<tr>
 							<td>
-								<input type="number" id="jumlah-anak" min="0" max="10"placeholder="0">
+								<input type="number" id="child" value="0" min="0" max="15">
 								<label for="jumlah-anak">
 								Anak-Anak
 								</label>
@@ -158,10 +158,17 @@
 						</tr>
 						<tr>
 							<td>
-								<input type="number" id="jumlah-bayi" min="0" max="10"placeholder="0">
+								<input type="number" id="baby" value="0" min="0" max="15">
 								<label for="jumlah-bayi">
 								Bayi
 								</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<br>
+								<p>Jumlah Penumpang:</p>
+								<input type="text" id="totalPassenger" value="Dewasa/Anak/Bayi"  readonly>
 							</td>
 						</tr>
 					</table>
@@ -502,6 +509,31 @@
 	timer.start();
 
 	</script>
+<!--TUTUP SCRIPT TIMER COUNTDOWN-->
+
+<!--SCRIPT TIMER COUNTDOWN-->
+	<script>
+	// Ambil semua input jumlah penumpang
+	const adultInput = document.getElementById('adult');
+	const childInput = document.getElementById('child');
+	const babyInput = document.getElementById('baby');
+  
+	// Ambil element yang menampilkan jumlah penumpang
+	const totalPassenger = document.getElementById('totalPassenger');
+  
+	// Buat event listener yang akan dijalankan setiap kali nilai
+	// dari salah satu input jumlah penumpang diubah
+	const updateTotalPassenger = () => {
+	  // Update nilai dalam input text yang menampilkan jumlah penumpang
+	  // dengan format "adult Dewasa/child Anak/baby Bayi"
+	  totalPassenger.value = `${adultInput.value} Dewasa/${childInput.value} Anak/${babyInput.value} Bayi`;
+	};
+  
+	// Tambahkan event listener pada setiap input jumlah penumpang
+	adultInput.addEventListener('change', updateTotalPassenger);
+	childInput.addEventListener('change', updateTotalPassenger);
+	babyInput.addEventListener('change', updateTotalPassenger);
+  	</script>
 <!--TUTUP SCRIPT TIMER COUNTDOWN-->
 
 
