@@ -49,10 +49,7 @@
 
 <!--TIME COUNTDOWN-->
 <div class="timer-order timer">
-	Mohon selesaikan pembayaran dalam 
-	<input id="hours" class="timer-order-text" placeholder="00"disabled> : 
-	<input id="minutes" class="timer-order-text" disabled> : 
-	<input id="seconds" class="timer-text22 timer-order-text"disabled>
+	<div id="timer"></div>
 </div>
 <!--TUTUP TIME COUNTDOWN-->
 
@@ -249,51 +246,34 @@
     <script src="/jalanterus/frontend/libraries/bootstrap/js/bootstrap.js"></script>
     <!--SCRIPT TIMER COUNTDOWN-->
       <script>
-        function Timer( minuteId, secondsId, initValue ){
-      
-      this.minutes = initValue;
-      
-      this.seconds = initValue * 60;
-      
-      this.minuteElement = document.getElementById( minuteId );
-      
-      this.secondElement = document.getElementById( secondsId );  
-      
-      this.decrement = function(){
-        
-        if( this.seconds < 59 ){
-          this.secondElement.value = this.seconds;
-        } else {
-          this.minuteElement.value = this.getMinutes();
-          this.secondElement.value = this.getSeconds();
-        }
-        
-        this.seconds--;    
-        setTimeout( this.decrement.bind( this ), 1000 );
-        
-      };
-      
-      this.getMinutes = function(){
-        this.minutes = Math.floor( this.seconds / 60 );
-        return this.minutes;
-      };
-      
-      this.getSeconds = function(){
-        return this.seconds - Math.round( this.minutes * 60 );
-      };
-      
-      this.start = function(){
-        this.decrement();
-      };
-      
-      return this;
-      
-      }
+// menetapkan waktu maksimal (dalam detik)
+var maxTime = 10800; // 3 jam
 
-      // first 2 params are the input id values, last is the intial minute value
-      var timer = new Timer( "minutes", "seconds", 60 ); 
+// menetapkan elemen HTML yang akan menampilkan waktu
+var timerEl = document.getElementById("timer");
 
-      timer.start();
+// menetapkan fungsi yang akan dipanggil setiap detiknya
+function updateTimer() {
+  // mengurangi waktu maksimal sebanyak 1 detik
+  maxTime--;
+
+  // menghitung jam, menit, dan detik
+  var hours = Math.floor(maxTime / 3600);
+  var minutes = Math.floor(maxTime % 3600 / 60);
+  var seconds = maxTime % 60;
+
+  // menampilkan waktu maksimal dalam format HH:MM:SS
+  timerEl.innerHTML = "Mohon selesaikan pembayaran dalam " + hours + ":" + minutes + ":" + seconds;
+
+  // jika waktu habis, menutup halaman
+  if (maxTime == 0) {
+    window.close();
+  }
+}
+
+// menjalankan fungsi updateTimer setiap detiknya
+setInterval(updateTimer, 1000);
+
 
       </script>
     <!--TUTUP SCRIPT TIMER COUNTDOWN-->
