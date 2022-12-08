@@ -148,7 +148,7 @@
                 <form action="/jalanterus/pages/form-perjalanan.html">
                 <div class="form-group has-search">
                     <span class="fa fa-search form-control-feedback"></span>
-                    <input type="text" class="form-control" placeholder="Cari tempat wisata di Indonesia" id="searchBar">
+                    <input type="search" class="form-control" placeholder="Cari tempat wisata di Indonesia" id="search-input">
                   </div>
                 </form>
                   <a href="#"><p>Jakarta  -  Bali  -  Riau  -  NTT  - Singapura  -  Kep Riau  -  Jawa Barat</p></a>
@@ -446,16 +446,40 @@
     </script>
 
     <script>
-      var searchTerms = ["Pantai Bali", "Gunung Bromo", "Taman Mini Indonesia Indah", "Danau Toba", "Pulau Komodo"];
-      var counter = 0;
-
-      setInterval(function() {
-          document.getElementById("searchBar").placeholder = searchTerms[counter];
-          counter++;
-          if (counter >= searchTerms.length) {
-              counter = 0;
-          }
-      }, 2000);
+  const searchInput = document.getElementById('search-input');
+  const placeholders = ["Pantai Kuta", "Bali", "Gunung Bromo", "Taman Nasional Tanjung Puting", "Pulau Derawan", "Danau Toba", "Borobudur", "Pantai Bunaken"];
+  let currentPlaceholderIndex = 0;
+  let isTyping = false;
+  
+  setInterval(() => {
+    if (!isTyping) {
+      searchInput.placeholder = '';
+      typePlaceholder();
+    }
+  }, 3000);
+  
+  function typePlaceholder() {
+    let currentPlaceholder = placeholders[currentPlaceholderIndex];
+    let currentPlaceholderLength = currentPlaceholder.length;
+    let currentCharIndex = 0;
+  
+    isTyping = true;
+  
+    let typeInterval = setInterval(() => {
+      searchInput.placeholder += currentPlaceholder[currentCharIndex];
+      currentCharIndex++;
+  
+      if (currentCharIndex === currentPlaceholderLength) {
+        clearInterval(typeInterval);
+        isTyping = false;
+        currentPlaceholderIndex++;
+  
+        if (currentPlaceholderIndex === placeholders.length) {
+          currentPlaceholderIndex = 0;
+        }
+      }
+    }, 100);
+  }
     </script>
 
   </body>
